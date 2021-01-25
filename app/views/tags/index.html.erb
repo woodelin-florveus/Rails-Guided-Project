@@ -1,0 +1,11 @@
+<h1>Tags#index</h1>
+<p>Find me in app/views/tags/index.html.erb</p>
+
+
+<ul>
+<% @tags.map do |tag_ins| %>
+    <li>
+    <%= link_to tag_ins.name, tag_path(tag_ins)%>
+    </li>
+<%end%>
+</ul>
