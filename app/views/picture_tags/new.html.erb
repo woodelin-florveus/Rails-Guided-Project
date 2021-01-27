@@ -1,0 +1,9 @@
+<h1>PictureTags#new</h1>
+<p>Find me in app/views/picture_tags/new.html.erb</p>
+
+
+<%= form_for @picture_tag do |f| %>
+    <%= f.collection_select :picture_id, @pictures, :id, :image_url %>
+    <%= f.collection_select :tag_id, @tags, :id, :name %>
+    <%= f.submit "Add To Pictures"%>
+  <% end %>

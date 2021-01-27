@@ -2,8 +2,9 @@
 <p>Find me in app/views/pictures/index.html.erb</p>
 
 <ul>
-    <% @pictures.each do |picture|%>
-        <div><img src=<%=picture.image_url%>  width="500" height="600"/></div>
+    <% @pictures.each do |picture_inst|%>
+        <div><img src=<%=picture_inst.image_url%>  width="500" height="600"/></div>
+        <div><%= link_to picture_inst.title, picture_path(picture_inst) %></div>
         <%end%>
-        <%= link_to @picture_tag%>
+        
 </ul>

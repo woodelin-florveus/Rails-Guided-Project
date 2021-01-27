@@ -1,14 +1,20 @@
 <h1>All Pictures </h1>
 
-<h3>Create a new Picture</h3>
+<h1>User: <%=@user.username%></h1>
 
 
 
-    <%@pictures.each do |picture|%>
-   
-        <img src=<%=picture.image_url%>  width="500" height="600"/>
-        
-        <%end%>
+<h1>Create a new Picture</h1>
 
 
 
+
+<%= @user.pictures.each do |picture_inst|%>
+    <li><img alt= "<%= picture_inst.title%>" src="<%= picture_inst.image_url %>"/></li>
+
+    <br>
+    
+<%end%>
+
+<%= button_to "Create Picture", new_picture_path, :method => "get" %>
+ 

@@ -1,9 +1,9 @@
 <h1>Im the index page</h1>
 
 <ul>
-  <% @users.each do |user| %>
+  <% @users.each do |user_inst| %>
     <li>
-      <%= link_to user.username, "/users/#{user.id}" %>
+      <%= link_to user_inst.username, user_path(user_inst) %>
     </li>
     <br>
   <% end %>

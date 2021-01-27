@@ -1,0 +1,14 @@
+<h1> this is the new page  </h1>
+
+
+
+<%= form_for @picture do |f| %>
+    <%= f.label :image, 'Your Image' %>
+    <%= f.collection_select :tags, @tags, :id, :name %>
+    <br/>
+    <%= f.collection_select :user_id, @users, :id, :username %>
+    <%= f.label :title, 'title' %>
+    <%= f.text_field :title %>
+    <%= f.text_field :image_url %>
+    <%= f.submit "Create image" %>
+<% end %>
