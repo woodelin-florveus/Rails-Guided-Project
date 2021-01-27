@@ -1,6 +1,6 @@
 <h1>All Pictures </h1>
 
-<h1>User: <%=@user.username%></h1>
+<h1> Welcome User: <%=@user.username%></h1>
 
 
 
@@ -8,10 +8,9 @@
 
 
 
-
-<%= @user.pictures.each do |picture_inst|%>
-    <li><img alt= "<%= picture_inst.title%>" src="<%= picture_inst.image_url %>"/></li>
-
+<% @user.pictures.each do |picture_inst|%>
+    <li><img alt= <%= picture_inst.title %> src=<%= picture_inst.image_url %>/></li>
+    <%= picture_inst.picture.title %>
     <br>
     
 <%end%>
